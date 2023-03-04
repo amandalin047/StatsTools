@@ -1,5 +1,7 @@
 import numpy as np
+import statsmodels.api as sm
 from collections import namedtuple
+
 def my_OLS(Y, X, names=[]):
     if names == []:
         for i in range(np.shape(X)[1]):
@@ -25,7 +27,7 @@ def my_OLS(Y, X, names=[]):
     llike_arr = np.empty((num_t))
     AIC_arr = np.empty((num_t))
     for t in range(num_t):
-        ols_fit = statsmodels.api.OLS(Y[:,t], X).fit()
+        ols_fit = sm.OLS(Y[:,t], X).fit()
         beta_arr[:,t] = ols_fit.params
         tval_arr[:,t] = ols_fit.tvalues
         pval_arr[:,t] = ols_fit.pvalues
