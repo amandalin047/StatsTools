@@ -1,4 +1,5 @@
 import numpy as np
+from collections import namedtuple
 def my_OLS(Y, X, names=[]):
     if names == []:
         for i in range(np.shape(X)[1]):
