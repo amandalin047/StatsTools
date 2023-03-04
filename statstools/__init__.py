@@ -1,1 +1,1 @@
-from method import my_OLS
+from .method import my_OLS
