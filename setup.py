@@ -15,7 +15,7 @@ setuptools.setup(
     project_urls = {
         'Project_Urls': 'https://github.com/amandalin047/StatsTools'
     },
-    license='MIT,
+    license='MIT',
     packages=['statstools'],
     install_requires=['statsmodels'],
 )
